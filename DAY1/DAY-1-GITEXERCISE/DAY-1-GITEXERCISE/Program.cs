@@ -34,8 +34,8 @@ namespace DAY_1_GITEXERCISE
             Console.WriteLine($"\nName: {Name}");
             Console.WriteLine($"Age: {age}");
             Console.WriteLine($"Age next year: {ageNextYear}");
-            Console.WriteLine($"Annual Salary: ₹{salary}");
-            Console.WriteLine($"Monthly Salary: ₹{monthlySalary:F2}");
+            Console.WriteLine($"Annual Salary: {salary}");
+            Console.WriteLine($"Monthly Salary: {monthlySalary}");
 
 
 
