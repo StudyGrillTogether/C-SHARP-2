@@ -28,9 +28,16 @@ namespace PRACTICE_DAY_1
             Console.WriteLine(Convert.ToInt32(num1));
 
             //taking safe user input
+            // safe way 
+            Console.Write("Enter age: ");
+            string input = Console.ReadLine();
 
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"the age is {age}");
+            if (!int.TryParse(input, out int age))
+            {
+                Console.WriteLine("Invalid age input");
+                return;
+            }
+
 
             //compare numeric types
             int a = 10;
