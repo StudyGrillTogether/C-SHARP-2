@@ -36,7 +36,7 @@ namespace Basic_Calculator
                             Console.WriteLine("the multiplication is " + (num1 * num2));
                             break;
                         case 4:
-                            Console.WriteLine("the division is " + Convert.ToDouble(num1 /(double) num2));
+                            Console.WriteLine("the division is " + Convert.ToDouble(num1 / num2));
                             break;
 
                     }
