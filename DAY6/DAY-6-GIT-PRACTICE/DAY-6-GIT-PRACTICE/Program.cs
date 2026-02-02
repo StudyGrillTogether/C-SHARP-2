@@ -24,7 +24,7 @@ namespace DAY_6_GIT_PRACTICE
             Console.WriteLine("Grade:" + grade);
             Console.WriteLine(grade != "Fail" ? "Passed" : "Failed");
         }
-        static void ProcessStudent(int marks)
+        static void Calculategrid(int marks)
         {
             if (!IsvalidMarks(marks))
             {
@@ -63,7 +63,7 @@ namespace DAY_6_GIT_PRACTICE
             }
             Console.WriteLine("enter your marks");
             int marks=Convert.ToInt32(Console.ReadLine());
-            ProcessStudent(marks);
+            Calculategrid(marks);
 
         }
     }
