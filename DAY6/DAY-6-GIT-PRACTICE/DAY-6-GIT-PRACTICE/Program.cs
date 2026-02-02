@@ -8,6 +8,32 @@ namespace DAY_6_GIT_PRACTICE
 {
     internal class Program
     {
+        static bool IsvalidMarks(int marks)
+        {
+            return marks >= 0 && marks <= 100;
+        }
+        static string CalculationGrade(int marks)
+        {
+            if (marks >= 90) return "A";
+            if (marks >= 75) return "B";
+            if (marks >= 60) return "C";
+            return "Fail";
+        }
+        static void PrintResult(string grade)
+        {
+            Console.WriteLine("Grade:" + grade);
+            Console.WriteLine(grade != "Fail" ? "Passed" : "Failed");
+        }
+        static void ProcessStudent(int marks)
+        {
+            if (!IsvalidMarks(marks))
+            {
+                Console.WriteLine("invalid marks");
+                return;
+            }
+            string grade = CalculationGrade(marks);
+            PrintResult(grade);
+        }
 
         static void Main(string[] args)
         {
@@ -35,6 +61,9 @@ namespace DAY_6_GIT_PRACTICE
                     Console.WriteLine("Fail");
                     break;
             }
+            Console.WriteLine("enter your marks");
+            int marks=Convert.ToInt32(Console.ReadLine());
+            ProcessStudent(marks);
 
         }
     }
