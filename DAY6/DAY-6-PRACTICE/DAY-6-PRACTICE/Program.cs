@@ -147,7 +147,7 @@ namespace DAY_6_PRACTICE
             //not using big code 
             ProcessStudent(90);
 
-            //enum with swithc
+            //enum with switch is the best combination 
             Day today = Day.Friday;
 
             switch (today)
@@ -165,8 +165,14 @@ namespace DAY_6_PRACTICE
                     Console.WriteLine("Weekend!");
                     break;
             }
+            //clean safe and readable
 
-
+            OrderStatus status = OrderStatus.Shipped;
+            if(status == OrderStatus.Shipped)
+            {
+                Console.WriteLine("order shipped");
+            }
+            //no magic numbers no typos compiler checks everything
         }
         static void increment(ref int x)
         {
@@ -214,7 +220,13 @@ namespace DAY_6_PRACTICE
             Saturday,
             Sunday
         }
-        
+        enum OrderStatus
+        {
+            Placed,
+            Shipped,
+            Delivered,
+            Cancelled
+        }
 
     }
 }
