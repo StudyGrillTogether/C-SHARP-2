@@ -173,6 +173,55 @@ namespace DAY_6_PRACTICE
                 Console.WriteLine("order shipped");
             }
             //no magic numbers no typos compiler checks everything
+            //using enums in switch
+            switch (status)
+            {
+                case OrderStatus.Placed:
+                    Console.WriteLine("Order placed");
+                    break;
+
+                case OrderStatus.Shipped:
+                    Console.WriteLine("Order shipped");
+                    break;
+            }
+
+            //using type casting in enums
+            Status s = Status.aprroved;
+            int code = (int)s;
+            Console.WriteLine(code); //2 
+            //used when saving to database
+            //sending via API
+            //LOGGING NUMERIC CODES
+
+            ///safe conversion using enum.isdefined
+            int code1 = 20;
+            if (Enum.IsDefined(typeof(Status), code1))
+            {
+                Status s1 = (Status)code1;
+                Console.WriteLine(s1);
+            }
+            else
+            {
+                Console.WriteLine("invalid state of code");
+            }
+            //safe parsing using enum.tryparse
+            string input = "aprroved";
+            if(Enum.TryParse(input,out Status s2))
+            {
+                Console.WriteLine(s2);
+            }
+            else
+            {
+                Console.WriteLine("invalid input");
+            }
+            //no exception 
+            ///clean
+            ///safe 
+
+            Level l = (Level)2;
+            Console.WriteLine((int)l);
+            
+
         }
         static void increment(ref int x)
         {
@@ -226,6 +275,18 @@ namespace DAY_6_PRACTICE
             Shipped,
             Delivered,
             Cancelled
+        }
+        enum Status
+        {
+            pending=1,
+            aprroved=2,
+            rejected=3
+        }
+        enum Level
+        {
+            low=1,
+            medium=2,
+            high=3
         }
 
     }
