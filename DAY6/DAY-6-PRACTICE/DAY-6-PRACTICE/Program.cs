@@ -242,7 +242,7 @@ namespace DAY_6_PRACTICE
         {
             if (marks >= 90) return "A";
             if(marks>=75) return "B";
-            if (marks > -60) return "C";
+            if (marks >=60) return "C";
             return "Fail";
         }
         static void PrintResult(string grade)

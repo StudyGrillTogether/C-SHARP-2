@@ -65,6 +65,25 @@ namespace DAY_6_GIT_PRACTICE
             int marks=Convert.ToInt32(Console.ReadLine());
             Calculategrid(marks);
 
+            //practice 4
+            PrintAllGrades();
+
         }
+        static void PrintAllGrades()
+        {
+            Console.WriteLine("\nALL POSSIBLE GRADES");
+            foreach(Grade g in Enum.GetValues(typeof(Grade)))
+            {
+                Console.WriteLine($"{g}={(int)g}");
+            }
+        }
+        enum Grade
+        {
+            A,
+            B,
+            C,
+            FAIL
+        }
+
     }
 }
