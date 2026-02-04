@@ -11,7 +11,14 @@ namespace DAY_5_PRACTICE
     {
         static void Main(string[] args)
         {
+            ///If data.txt does NOT exist → ✅ it creates the file and writes:
+            ///If data.txt already exists → ⚠️ it overwrites everything in the file with that text.
+
             File.WriteAllText("data.txt", "hello c# , file wiriting");
+
+            // Appends text to the end of the file without removing existing content.
+            // If the file does not exist, it will be created.
+
             File.AppendAllText("data.txt", "\n appending the text");
             //reading from a file
             string content = File.ReadAllText("data.txt");
