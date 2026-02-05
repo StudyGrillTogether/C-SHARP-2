@@ -257,6 +257,7 @@ namespace DAY_7_GIT_EXERCISE
                     case 5:
                         Console.WriteLine("Exiting the application");
                         File.WriteAllText(logpath, string.Empty);
+                        File.WriteAllText(filePath, string.Empty);
                         isRunning = false;
                         break;
                     ///if app.log  exist it becomes empty
