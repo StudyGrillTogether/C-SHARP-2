@@ -31,9 +31,15 @@ namespace DAY_5_GIT_PRACTICE
         {
             string logentry=$"{DateTime.Now}:{message}";
             File.AppendAllText(path, logentry + Environment.NewLine);
+            //the reason we use append is because if file doesn not exist it will create a 
+            //new file
+            /// enviornment.Newline insers a new line character which ensures 
+            /// each log entry appears on its own line
         }
         static void Main(string[] args)
         {
+            //these lines do not create files by themselves,files are created when
+            //File. method is called
             string filePath = "myfile.txt";
             string logpath = "app.log";
 
